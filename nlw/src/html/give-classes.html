@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/others/header.css" />
+    <link rel="stylesheet" href="../css/others/forms.css" />
+    <link rel="stylesheet" href="../css/others/page-give-classes.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>NLW #2</title>
+  </head>
+  <body id="page-give-classes">
+    <div id="container">
+      <header class="page-header">
+        <div class="top-bar-container">
+          <a href="./index.html">
+            <img src="../img/icons/back.svg" alt="voltar" />
+          </a>
+          <img src="../img/logo.svg" alt="proffy" />
+        </div>
+        <div class="header-content">
+          <strong>Que incrível que voce quer dar aulas</strong>
+          <p>O primeiro passo, é preencher esse formulário de inscrição</p>
+        </div>
+      </header>
+      <main>
+        <form action="" id="create-class">
+          <fieldset>
+            <legend>Seus dados</legend>
+
+            <div class="input-block">
+              <label for="name">Nome ocmpleto</label>
+              <input name="name" id="name" required />
+            </div>
+
+            <div class="input-block">
+              <label for="avatar">
+                Link da sua foto <small>(comece com https://)</small>
+              </label>
+              <input type="url" id="avatar" name="avatar" required />
+            </div>
+
+            <div class="input-block">
+              <label for="whatsapp">
+                Whatsapp <small>(somente números)</small>
+              </label>
+              <input type="number" name="whatsapp" id="whatsapp" required />
+            </div>
+
+            <div class="textarea-block">
+              <label for="bio">Biografia</label>
+              <!-- Textarea precisa ser colado, se não ele cria "espaços"
+              para digitaçãoa, isso é, não começa no inicio -->
+              <textarea name="bio" id="bio" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Sobre a aula</legend>
+            <div class="select-block">
+              <label for="subject">Máteria</label>
+              <select name="subject" id="subject" required>
+                <!-- <option value="" disabled="" hidden=""> -->
+                <option value="">
+                  Selecione uma opção
+                </option>
+                <option value="1">Artes</option>
+                <option value="2">Biologia</option>
+                <option value="3">Ciências</option>
+                <option value="4">Educação física</option>
+                <option value="5">Física</option>
+                <option value="6">Geografia</option>
+                <option value="7">História</option>
+                <option value="8">Matemática</option>
+                <option value="9">Português</option>
+                <option value="10">Química</option>
+              </select>
+            </div>
+
+            <div class="input-block">
+              <label for="cost">
+                Custo da sua hora/aula
+                <small>(R$)</small>
+              </label>
+              <!-- <input name="cost" id="cost" type="number" /> -->
+              <input type="cost" id="cost" type="number" />
+            </div>
+          </fieldset>
+
+          <fieldset id="schedule-items">
+            <legend>
+              Horários disponíveis
+              <button id="add-time">+ Novo Horáro</button>
+            </legend>
+
+            <div class="schedule-item">
+              <div class="select-block">
+                <label for="weekday">Dia da semana</label>
+                <!-- Array de weekday, significa que para o backend,
+                   pode ir mais de um valor -->
+                <select name="weekday[]" required>
+                  <!-- <option value="" disabled="" hidden="">
+                    Selecione uma opção
+                  </option> -->
+                  <option value="">
+                    Selecione uma opção
+                  </option>
+                  <option value="0">Domingo</option>
+                  <option value="1">Segunda-feira</option>
+                  <option value="2">Terça-feira</option>
+                  <option value="3">Quarta-feira</option>
+                  <option value="4">Quinta-feira</option>
+                  <option value="5">Sexta-feira</option>
+                  <option value="6">Sábado</option>
+                </select>
+              </div>
+
+              <div class="input-block">
+                <label for="time_from">Das</label>
+                <input type="time" name="name_from[]" required />
+              </div>
+
+              <div class="input-block">
+                <label for="time_to">Até</label>
+                <input type="time" name="time_to[]" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="schedule-items">
+            <legend></legend>
+
+            <div class="schedule-item">
+              <div class="select-block">
+                <label for="weekday">Dia da semana</label>
+                <select name="weekday[]" required>
+                  <option value="">
+                    Selecione uma opção
+                  </option>
+                  <option value="0">Domingo</option>
+                  <option value="1">Segunda-feira</option>
+                  <option value="2">Terça-feira</option>
+                  <option value="3">Quarta-feira</option>
+                  <option value="4">Quinta-feira</option>
+                  <option value="5">Sexta-feira</option>
+                  <option value="6">Sábado</option>
+                </select>
+              </div>
+
+              <div class="input-block">
+                <label for="time_from">Das</label>
+                <input type="time" name="name_from[]" required />
+              </div>
+
+              <div class="input-block">
+                <label for="time_to">Até</label>
+                <input type="time" name="time_to[]" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <footer>
+            <p>
+              <img src="../img/icons/warning.svg" alt="Aviso importante" />
+              Importante!<br />
+              Preencha todos os dados
+            </p>
+            <button type="submit" form="create-class">
+              Salvar cadastro
+            </button>
+          </footer>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
