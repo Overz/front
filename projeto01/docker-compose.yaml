@@ -2,30 +2,13 @@ version: '3.8'
 
 services:
   app:
-    image: app/teste
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: app-container
     ports:
       - '3000:3000'
     volumes:
       - .:/app/
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
-    command: npm start
-
-  postgres:
-    image: postgres
-    container_name: postgres-container
-    restart: always
-    volumes:
-      - .:/app/data/db
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
-
-volumes:
-  dbdata:
+    stdin_open: true
+    network_mode: bridge

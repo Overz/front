@@ -1,14 +1,20 @@
-const express = require('express');
+const app = require('./app');
+const env = require('env-var');
 
-const HOST = process.env.HOST || '0.0.0.0';
-const PORT = process.env.PORT || '3000';
+const HOST = env.get('HOST').asString() || '0.0.0.0';
+const PORT = env.get('PORT').asString() || '3000';
 
-const app = express();
+const start = async () => {
+  app.listen(PORT, HOST, () => {
+    console.log(`Running on port ${PORT}`);
+  });
+};
 
-app.get('/', (req, res) => {
-  res.send({ message: 'Hello World' });
-});
+const finish = async () => {
+  process.exit();
+};
 
-app.listen(PORT, HOST, () => {
-  console.log(`Running on port ${PORT}`);
-});
+process.on('SIGINT', finish);
+process.on('SIGTERM', finish);
+
+start();

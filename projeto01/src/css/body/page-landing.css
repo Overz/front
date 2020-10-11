@@ -1,0 +1,117 @@
+body {
+  background-color: #ccc;
+}
+
+.content {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.content .cards {
+  width: 50%;
+  padding: 1.4rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .cards .left,
+.content .cards .middle {
+  margin-right: 1.4rem;
+}
+
+.content .cards .left,
+.content .cards .middle,
+.content .cards .right {
+  width: 100%;
+}
+
+.content .cards .left img,
+.content .cards .middle img,
+.content .cards .right img {
+  display: block;
+}
+
+.content .cards p {
+  text-transform: uppercase;
+  font: 500 1.6rem Verdana, sans-serif;
+  padding: 1rem 0 1rem 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.4rem;
+}
+
+.content .arts {
+  background-color: white;
+  margin-top: 1rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .arts article {
+  width: 100%;
+}
+
+.content .arts h2,
+.content .arts p {
+  padding: 1rem;
+  margin: 1rem 1.4rem;
+  font-size: 1.6rem;
+}
+
+.content .arts h2 {
+  background-color: #dbdbdb;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: white;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=page-landing.css.map */
